@@ -1,4 +1,5 @@
 
+// topology view
 //  n0                n4
 //    \              /
 //     \            /
@@ -26,8 +27,6 @@ using namespace ns3;
 
 
 NS_LOG_COMPONENT_DEFINE ("Task1");
-
-
 
 
 static void 
@@ -80,7 +79,7 @@ main (int argc, char *argv[])
   NetDeviceContainer d2d3 = p2p.Install (n2n3);
 
   // Later, we add IP addresses.
-  NS_LOG_INFO ("Assign IP Addresses.");
+  NS_LOG_INFO ("Assign IP Addresses");
   Ipv4AddressHelper ipv4;
   ipv4.SetBase ("10.1.1.0", "255.255.255.0");
   Ipv4InterfaceContainer i0i2 = ipv4.Assign (d0d2);
